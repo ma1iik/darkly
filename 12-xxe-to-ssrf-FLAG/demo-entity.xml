@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- BASIC DEMO: just shows what an entity does, nothing malicious.
+     we define city = "Paris", then use &city; in the title.
+     after import the event title should read "Meetup in Paris",
+     which proves the parser replaces &city; with the value. -->
+<!DOCTYPE agenda [ <!ENTITY city "Paris"> ]>
+<agenda>
+  <event>
+    <title>Meetup in &city;</title>
+    <date>2042-09-09</date>
+  </event>
+</agenda>

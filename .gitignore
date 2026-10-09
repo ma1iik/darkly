@@ -1,0 +1,12 @@
+# NEVER commit the VM appliance or huge downloads
+*.ova
+*.crdownload
+*.vmdk
+*.vdi
+
+**/Resources/downloaded/
+
+# Local noise
+.DS_Store
+__pycache__/
+*.pyc
